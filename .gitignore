@@ -97,3 +97,7 @@ GitHub.sublime-settings
 *.DS_Store
 **/__pycache__
 **/.DS_Store
+
+# Static files
+
+static_collected/
