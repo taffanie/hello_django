@@ -8,16 +8,6 @@
 # def home(request):
 #     return HttpResponse("Hello, Django!")
 
-import re
-from django.utils.timezone import datetime
-from django.http import HttpResponse
-from django.shortcuts import render
-
-
-def home(request):
-    return HttpResponse("Hello, Django!")
-
-
 # def hello_there(request, name):
 #     now = datetime.now()
 #     formatted_now = now.strftime("%A, %d %B, %Y at %X")
@@ -34,6 +24,12 @@ def home(request):
 #     content = "Hello there, " + clean_name + "! It's " + formatted_now
 #     return HttpResponse(content)
 
+import re
+from django.utils.timezone import datetime
+from django.http import HttpResponse
+from django.shortcuts import render
+
+
 def hello_there(request, name):
     return render(
         request,
@@ -43,3 +39,15 @@ def hello_there(request, name):
             'date': datetime.now()
         }
     )
+
+
+def home(request):
+    return render(request, "hello/home.html")
+
+
+def about(request):
+    return render(request, "hello/about.html")
+
+
+def contact(request):
+    return render(request, "hello/contact.html")
