@@ -101,3 +101,7 @@ GitHub.sublime-settings
 # Static files
 
 static_collected/
+
+# Requirement file
+
+requirements.txt
